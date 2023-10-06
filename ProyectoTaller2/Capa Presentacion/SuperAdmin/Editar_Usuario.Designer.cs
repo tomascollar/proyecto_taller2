@@ -45,7 +45,7 @@
             this.btnEditarUsuario = new FontAwesome.Sharp.IconButton();
             this.lbl1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -188,7 +188,7 @@
             this.btnEditarUsuario.IconColor = System.Drawing.Color.Black;
             this.btnEditarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditarUsuario.Location = new System.Drawing.Point(417, 367);
+            this.btnEditarUsuario.Location = new System.Drawing.Point(430, 368);
             this.btnEditarUsuario.Name = "btnEditarUsuario";
             this.btnEditarUsuario.Size = new System.Drawing.Size(125, 57);
             this.btnEditarUsuario.TabIndex = 16;
@@ -203,27 +203,40 @@
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.ForeColor = System.Drawing.Color.White;
-            this.lbl1.Location = new System.Drawing.Point(154, 92);
+            this.lbl1.Location = new System.Drawing.Point(365, 69);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(220, 20);
+            this.lbl1.Size = new System.Drawing.Size(30, 20);
             this.lbl1.TabIndex = 17;
-            this.lbl1.Text = "ID DEL USUARIO A EDITAR\r\n";
+            this.lbl1.Text = "ID:";
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(398, 92);
+            this.txtID.Location = new System.Drawing.Point(401, 69);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(144, 20);
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(21, 20);
             this.txtID.TabIndex = 18;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(250, 367);
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnCancelar.FlatAppearance.BorderSize = 2;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.btnCancelar.IconColor = System.Drawing.Color.Brown;
+            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCancelar.IconSize = 30;
+            this.btnCancelar.Location = new System.Drawing.Point(266, 368);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(124, 57);
+            this.btnCancelar.Size = new System.Drawing.Size(117, 57);
             this.btnCancelar.TabIndex = 19;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // Editar_Usuario
             // 
@@ -273,7 +286,7 @@
         private FontAwesome.Sharp.IconButton btnEditarUsuario;
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Button btnCancelar;
+        private FontAwesome.Sharp.IconButton btnCancelar;
     }
     
  }

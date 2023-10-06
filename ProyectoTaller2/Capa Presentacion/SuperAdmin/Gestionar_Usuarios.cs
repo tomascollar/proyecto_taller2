@@ -146,9 +146,35 @@ namespace ProyectoTaller2.Capa_Presentacion.SuperAdmin
 
         private void btnEditaUsuario_Click(object sender, EventArgs e)
         {
-            //_form.openChildForm(new Editar_Usuario(_form));
-            Editar_Usuario editarform = new Editar_Usuario(_form);
-            editarform.Show();
+            if(dataGridUsuarios.SelectedRows.Count > 0)
+            {
+                //Obtengo la fila seleccionada
+                DataGridViewRow filaSeleccionada = dataGridUsuarios.SelectedRows[0];
+
+                //Obtengo los valores de las celdas
+                string id = filaSeleccionada.Cells[1].Value.ToString();
+                string nombre = filaSeleccionada.Cells[2].Value.ToString();
+                string apellido = filaSeleccionada.Cells[3].Value.ToString();
+                string telefono = filaSeleccionada.Cells[4].Value.ToString();
+                string usuario = filaSeleccionada.Cells[5].Value.ToString();
+                string contraseña = filaSeleccionada.Cells[6].Value.ToString();
+                string user_type = filaSeleccionada.Cells[7].Value.ToString();
+
+                //Creo una instancia del formulario de edicion
+                Editar_Usuario editarform = new Editar_Usuario(_form);
+
+                //Paso los datos al formulario
+                editarform.CargarDatos(id, nombre, apellido, telefono, usuario, contraseña, user_type);
+
+                //Muestro el formulario
+                editarform.ShowDialog();
+            }
+
+
+
+            //Arriba de esto codigo nuevo(para borrar en caso de error), abajo de esto el codigo que funcionaba bien
+            // Editar_Usuario editarform = new Editar_Usuario(_form);
+            // editarform.Show();
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)

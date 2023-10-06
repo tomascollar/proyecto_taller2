@@ -24,6 +24,17 @@ namespace ProyectoTaller2.Capa_Presentacion.SuperAdmin
             
         }
 
+        public void CargarDatos(string id, string nombre, string apellido, string telefono, string usuario, string contraseña, string tipo_user)
+        {
+            txtID.Text = id;
+            txtNombre.Text = nombre;
+            txtApellido.Text = apellido;
+            txtTelefono.Text = telefono;
+            txtUsuario.Text = usuario;
+            txtPass.Text = contraseña;
+            comboBoxTipo.Text = tipo_user;
+        }
+
 
         ErrorProvider errorP = new ErrorProvider();
 
@@ -190,6 +201,17 @@ namespace ProyectoTaller2.Capa_Presentacion.SuperAdmin
             comboBoxTipo.DataSource = list;
 
             comboBoxTipo.AutoCompleteSource = AutoCompleteSource.ListItems;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            var msg = MessageBox.Show("Desea cancelar la edicion?","Cancelar edicion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (msg == DialogResult.Yes)
+            {
+                this.Close();
+            }
+
+
         }
     }
 
