@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace ProyectoTaller2
 {
@@ -57,6 +58,16 @@ namespace ProyectoTaller2
                 e.Handled = true;
                 return false;
             }
+        }
+
+        public static bool validarEmail(string email)
+        {
+
+            //definimos la expresion regular con la cual vamos a validar el email
+            string patron = @"^[^\s@]+@[^\s@]+\.[^\s@]+$";
+
+            //utiizamos la funcion regex.ismatch para comparar el string ingresado con el patron
+            return Regex.IsMatch(email, patron);
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace ProyectoTaller2.Capa_Presentacion.Administrador
+﻿namespace ProyectoTaller2.Capa_Presentacion.SuperAdmin
 {
-    partial class FormComprasAdmin
+    partial class Restaurar_db
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // FormComprasAdmin
+            // Restaurar_db
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FormComprasAdmin";
-            this.Text = "FormComprasAdmin";
+            this.Name = "Restaurar_db";
+            this.Text = "Restaurar_db";
             this.ResumeLayout(false);
 
         }

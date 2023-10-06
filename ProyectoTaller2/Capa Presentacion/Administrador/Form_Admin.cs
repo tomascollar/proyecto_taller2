@@ -182,11 +182,7 @@ namespace ProyectoTaller2.CapaPresentacion.Administrador
         }
 
 
-        private void btnCompras_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color3);
-            openChildForm(new FormComprasAdmin());
-        }
+      
 
 
 
@@ -267,6 +263,16 @@ namespace ProyectoTaller2.CapaPresentacion.Administrador
             }
         }
 
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color3);
+            openChildForm(new Clientes_admin());
+        }
 
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color4);
+            openChildForm(new Reporte_ventas());
+        }
     }
 }

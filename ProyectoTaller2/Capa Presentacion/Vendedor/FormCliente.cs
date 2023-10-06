@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using ProyectoTaller2.CapaPresentacion.SuperAdmin;
+using ProyectoTaller2.Capa_Presentacion.Vendedor;
 
 namespace ProyectoTaller2
 {
@@ -36,7 +37,7 @@ namespace ProyectoTaller2
                 errorP.Clear();
         }
 
-        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
             bool valida = Validar.txtVacios(txtDniCliente);
             if (valida)
@@ -45,12 +46,15 @@ namespace ProyectoTaller2
                 errorP.Clear();
         }
 
-
-        private void btnAgregarCliente_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
-
             _form.openChildForm(new FormRegistroCliente(_form));
-            
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Editar_Cliente editar = new Editar_Cliente(_form);
+            editar.Show();
         }
     }
 }

@@ -24,8 +24,6 @@ namespace ProyectoTaller2.Capa_Presentacion.SuperAdmin
             
         }
 
-        
-
 
         ErrorProvider errorP = new ErrorProvider();
 

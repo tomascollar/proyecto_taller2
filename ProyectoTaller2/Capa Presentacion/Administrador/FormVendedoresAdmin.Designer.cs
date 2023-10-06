@@ -43,12 +43,14 @@
             // dataGridVendedores
             // 
             this.dataGridVendedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridVendedores.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridVendedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridVendedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombreVendedor,
             this.apellidoVendedor,
             this.telefonoVendedor,
             this.usuarioVendedor});
+            this.dataGridVendedores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.dataGridVendedores.Location = new System.Drawing.Point(4, 114);
             this.dataGridVendedores.Name = "dataGridVendedores";
             this.dataGridVendedores.ReadOnly = true;
@@ -83,32 +85,41 @@
             // 
             // btnVerVentas
             // 
-            this.btnVerVentas.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnVerVentas.IconColor = System.Drawing.Color.Black;
+            this.btnVerVentas.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnVerVentas.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnVerVentas.FlatAppearance.BorderSize = 2;
+            this.btnVerVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerVentas.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerVentas.IconChar = FontAwesome.Sharp.IconChar.ListCheck;
+            this.btnVerVentas.IconColor = System.Drawing.Color.White;
             this.btnVerVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnVerVentas.Location = new System.Drawing.Point(644, 25);
+            this.btnVerVentas.IconSize = 35;
+            this.btnVerVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerVentas.Location = new System.Drawing.Point(630, 28);
             this.btnVerVentas.Name = "btnVerVentas";
-            this.btnVerVentas.Size = new System.Drawing.Size(110, 31);
+            this.btnVerVentas.Size = new System.Drawing.Size(136, 38);
             this.btnVerVentas.TabIndex = 1;
             this.btnVerVentas.Text = "Ver Ventas";
-            this.btnVerVentas.UseVisualStyleBackColor = true;
+            this.btnVerVentas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVerVentas.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(39, 37);
+            this.label1.Location = new System.Drawing.Point(12, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 16);
+            this.label1.Size = new System.Drawing.Size(185, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Buscar por nombre:";
             // 
             // txtNombreVendedor
             // 
-            this.txtNombreVendedor.Location = new System.Drawing.Point(169, 36);
+            this.txtNombreVendedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreVendedor.Location = new System.Drawing.Point(203, 37);
             this.txtNombreVendedor.Name = "txtNombreVendedor";
-            this.txtNombreVendedor.Size = new System.Drawing.Size(121, 20);
+            this.txtNombreVendedor.Size = new System.Drawing.Size(163, 26);
             this.txtNombreVendedor.TabIndex = 3;
             // 
             // btnBuscar
@@ -120,9 +131,9 @@
             this.btnBuscar.IconColor = System.Drawing.Color.Black;
             this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBuscar.IconSize = 20;
-            this.btnBuscar.Location = new System.Drawing.Point(296, 34);
+            this.btnBuscar.Location = new System.Drawing.Point(381, 35);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(37, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(38, 29);
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);

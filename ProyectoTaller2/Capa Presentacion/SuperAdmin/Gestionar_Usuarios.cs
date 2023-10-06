@@ -140,11 +140,24 @@ namespace ProyectoTaller2.Capa_Presentacion.SuperAdmin
             }
         }
 
+
+        ErrorProvider errorP =  new ErrorProvider();
+
+
         private void btnEditaUsuario_Click(object sender, EventArgs e)
         {
             //_form.openChildForm(new Editar_Usuario(_form));
             Editar_Usuario editarform = new Editar_Usuario(_form);
             editarform.Show();
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+             bool valida = Validar.soloLetras(e);
+            if (!valida)
+                errorP.SetError(txtNombre, "Solo numeros");
+            else
+                errorP.Clear();
         }
     }
 }

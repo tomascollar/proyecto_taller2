@@ -80,17 +80,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Capa Presentacion\Administrador\Clientes_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capa Presentacion\Administrador\Clientes_admin.Designer.cs">
+      <DependentUpon>Clientes_admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Capa Presentacion\Administrador\Form_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Capa Presentacion\Administrador\Form_Admin.Designer.cs">
       <DependentUpon>Form_Admin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Capa Presentacion\Administrador\FormComprasAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Capa Presentacion\Administrador\FormComprasAdmin.Designer.cs">
-      <DependentUpon>FormComprasAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Capa Presentacion\Administrador\FormProductosAdmin.cs">
       <SubType>Form</SubType>
@@ -104,17 +104,23 @@
     <Compile Include="Capa Presentacion\Administrador\FormVendedoresAdmin.Designer.cs">
       <DependentUpon>FormVendedoresAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Capa Presentacion\Administrador\Reporte_ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capa Presentacion\Administrador\Reporte_ventas.Designer.cs">
+      <DependentUpon>Reporte_ventas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Capa Presentacion\SuperAdmin\Agregar_Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Capa Presentacion\SuperAdmin\Agregar_Usuario.Designer.cs">
       <DependentUpon>Agregar_Usuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Capa Presentacion\SuperAdmin\Clientes_superadmin.cs">
+    <Compile Include="Capa Presentacion\SuperAdmin\Backup_Restore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Capa Presentacion\SuperAdmin\Clientes_superadmin.Designer.cs">
-      <DependentUpon>Clientes_superadmin.cs</DependentUpon>
+    <Compile Include="Capa Presentacion\SuperAdmin\Backup_Restore.Designer.cs">
+      <DependentUpon>Backup_Restore.cs</DependentUpon>
     </Compile>
     <Compile Include="Capa Presentacion\SuperAdmin\Editar_Usuario.cs">
       <SubType>Form</SubType>
@@ -122,23 +128,35 @@
     <Compile Include="Capa Presentacion\SuperAdmin\Editar_Usuario.Designer.cs">
       <DependentUpon>Editar_Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Capa Presentacion\SuperAdmin\Generar_Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capa Presentacion\SuperAdmin\Generar_Backup.Designer.cs">
+      <DependentUpon>Generar_Backup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Capa Presentacion\SuperAdmin\Gestionar_Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Capa Presentacion\SuperAdmin\Gestionar_Usuarios.Designer.cs">
       <DependentUpon>Gestionar_Usuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Capa Presentacion\SuperAdmin\Movimientos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Capa Presentacion\SuperAdmin\Movimientos.Designer.cs">
-      <DependentUpon>Movimientos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Capa Presentacion\SuperAdmin\Form_SuperAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Capa Presentacion\SuperAdmin\Form_SuperAdmin.Designer.cs">
       <DependentUpon>Form_SuperAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Capa Presentacion\SuperAdmin\Restaurar_db.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capa Presentacion\SuperAdmin\Restaurar_db.Designer.cs">
+      <DependentUpon>Restaurar_db.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Capa Presentacion\Vendedor\Editar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capa Presentacion\Vendedor\Editar_Cliente.Designer.cs">
+      <DependentUpon>Editar_Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Capa Presentacion\Vendedor\FormVentasRegistradas.cs">
       <SubType>Form</SubType>
@@ -229,8 +247,8 @@
       <DependentUpon>proyecto_db.tt</DependentUpon>
     </Compile>
     <Compile Include="Validar.cs" />
-    <EmbeddedResource Include="Capa Presentacion\Administrador\FormComprasAdmin.resx">
-      <DependentUpon>FormComprasAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="Capa Presentacion\Administrador\Clientes_admin.resx">
+      <DependentUpon>Clientes_admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Capa Presentacion\Administrador\FormVendedoresAdmin.resx">
       <DependentUpon>FormVendedoresAdmin.cs</DependentUpon>
@@ -241,11 +259,14 @@
     <EmbeddedResource Include="Capa Presentacion\Administrador\FormProductosAdmin.resx">
       <DependentUpon>FormProductosAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Capa Presentacion\Administrador\Reporte_ventas.resx">
+      <DependentUpon>Reporte_ventas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Capa Presentacion\SuperAdmin\Agregar_Usuario.resx">
       <DependentUpon>Agregar_Usuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Capa Presentacion\SuperAdmin\Clientes_superadmin.resx">
-      <DependentUpon>Clientes_superadmin.cs</DependentUpon>
+    <EmbeddedResource Include="Capa Presentacion\SuperAdmin\Backup_Restore.resx">
+      <DependentUpon>Backup_Restore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Capa Presentacion\SuperAdmin\Editar_Usuario.resx">
       <DependentUpon>Editar_Usuario.cs</DependentUpon>
@@ -253,11 +274,17 @@
     <EmbeddedResource Include="Capa Presentacion\SuperAdmin\Form_SuperAdmin.resx">
       <DependentUpon>Form_SuperAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Capa Presentacion\SuperAdmin\Generar_Backup.resx">
+      <DependentUpon>Generar_Backup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Capa Presentacion\SuperAdmin\Gestionar_Usuarios.resx">
       <DependentUpon>Gestionar_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Capa Presentacion\SuperAdmin\Movimientos.resx">
-      <DependentUpon>Movimientos.cs</DependentUpon>
+    <EmbeddedResource Include="Capa Presentacion\SuperAdmin\Restaurar_db.resx">
+      <DependentUpon>Restaurar_db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Capa Presentacion\Vendedor\Editar_Cliente.resx">
+      <DependentUpon>Editar_Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Capa Presentacion\Vendedor\FormVentasRegistradas.resx">
       <DependentUpon>FormVentasRegistradas.cs</DependentUpon>

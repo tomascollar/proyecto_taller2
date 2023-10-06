@@ -56,6 +56,7 @@
             // dataGridProductos
             // 
             this.dataGridProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridProductos.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.productoNombre,
@@ -64,6 +65,7 @@
             this.prodPrecio,
             this.prodDescripcion,
             this.prodCategoria});
+            this.dataGridProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.dataGridProductos.Location = new System.Drawing.Point(12, 226);
             this.dataGridProductos.Name = "dataGridProductos";
             this.dataGridProductos.ReadOnly = true;
@@ -123,9 +125,9 @@
             this.btnAgregarProd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregarProd.IconSize = 30;
             this.btnAgregarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregarProd.Location = new System.Drawing.Point(660, 29);
+            this.btnAgregarProd.Location = new System.Drawing.Point(642, 38);
             this.btnAgregarProd.Name = "btnAgregarProd";
-            this.btnAgregarProd.Size = new System.Drawing.Size(105, 50);
+            this.btnAgregarProd.Size = new System.Drawing.Size(105, 39);
             this.btnAgregarProd.TabIndex = 2;
             this.btnAgregarProd.Text = "Agregar";
             this.btnAgregarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -143,9 +145,9 @@
             this.btnEditarProd.IconColor = System.Drawing.Color.Navy;
             this.btnEditarProd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditarProd.IconSize = 30;
-            this.btnEditarProd.Location = new System.Drawing.Point(660, 86);
+            this.btnEditarProd.Location = new System.Drawing.Point(642, 94);
             this.btnEditarProd.Name = "btnEditarProd";
-            this.btnEditarProd.Size = new System.Drawing.Size(105, 50);
+            this.btnEditarProd.Size = new System.Drawing.Size(105, 38);
             this.btnEditarProd.TabIndex = 3;
             this.btnEditarProd.Text = "Editar";
             this.btnEditarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -163,9 +165,9 @@
             this.btnEliminarProd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminarProd.IconSize = 30;
             this.btnEliminarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminarProd.Location = new System.Drawing.Point(660, 143);
+            this.btnEliminarProd.Location = new System.Drawing.Point(642, 150);
             this.btnEliminarProd.Name = "btnEliminarProd";
-            this.btnEliminarProd.Size = new System.Drawing.Size(105, 50);
+            this.btnEliminarProd.Size = new System.Drawing.Size(105, 37);
             this.btnEliminarProd.TabIndex = 4;
             this.btnEliminarProd.Text = "Eliminar";
             this.btnEliminarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -178,7 +180,7 @@
             this.txtPrecioProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecioProd.Location = new System.Drawing.Point(436, 59);
             this.txtPrecioProd.Name = "txtPrecioProd";
-            this.txtPrecioProd.Size = new System.Drawing.Size(132, 22);
+            this.txtPrecioProd.Size = new System.Drawing.Size(147, 22);
             this.txtPrecioProd.TabIndex = 5;
             this.txtPrecioProd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioProd_KeyPress);
             // 
@@ -187,7 +189,7 @@
             this.txtNombreProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreProd.Location = new System.Drawing.Point(162, 59);
             this.txtNombreProd.Name = "txtNombreProd";
-            this.txtNombreProd.Size = new System.Drawing.Size(132, 22);
+            this.txtNombreProd.Size = new System.Drawing.Size(141, 22);
             this.txtNombreProd.TabIndex = 6;
             // 
             // txtMarcaProd
@@ -195,7 +197,7 @@
             this.txtMarcaProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMarcaProd.Location = new System.Drawing.Point(162, 102);
             this.txtMarcaProd.Name = "txtMarcaProd";
-            this.txtMarcaProd.Size = new System.Drawing.Size(132, 22);
+            this.txtMarcaProd.Size = new System.Drawing.Size(141, 22);
             this.txtMarcaProd.TabIndex = 7;
             // 
             // txtStockProd
@@ -203,7 +205,7 @@
             this.txtStockProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStockProd.Location = new System.Drawing.Point(162, 147);
             this.txtStockProd.Name = "txtStockProd";
-            this.txtStockProd.Size = new System.Drawing.Size(132, 22);
+            this.txtStockProd.Size = new System.Drawing.Size(141, 22);
             this.txtStockProd.TabIndex = 8;
             this.txtStockProd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStockProd_KeyPress);
             // 
@@ -212,7 +214,7 @@
             this.txtDescripProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripProd.Location = new System.Drawing.Point(436, 102);
             this.txtDescripProd.Name = "txtDescripProd";
-            this.txtDescripProd.Size = new System.Drawing.Size(132, 22);
+            this.txtDescripProd.Size = new System.Drawing.Size(147, 22);
             this.txtDescripProd.TabIndex = 9;
             // 
             // comboCategoriaProd
@@ -230,72 +232,72 @@
             "Otros"});
             this.comboCategoriaProd.Location = new System.Drawing.Point(436, 148);
             this.comboCategoriaProd.Name = "comboCategoriaProd";
-            this.comboCategoriaProd.Size = new System.Drawing.Size(132, 24);
+            this.comboCategoriaProd.Size = new System.Drawing.Size(147, 24);
             this.comboCategoriaProd.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(91, 59);
+            this.label1.Location = new System.Drawing.Point(71, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.Size = new System.Drawing.Size(85, 25);
             this.label1.TabIndex = 11;
             this.label1.Text = "Nombre";
             // 
             // lblCateg
             // 
             this.lblCateg.AutoSize = true;
-            this.lblCateg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCateg.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCateg.ForeColor = System.Drawing.Color.White;
-            this.lblCateg.Location = new System.Drawing.Point(352, 149);
+            this.lblCateg.Location = new System.Drawing.Point(335, 146);
             this.lblCateg.Name = "lblCateg";
-            this.lblCateg.Size = new System.Drawing.Size(78, 20);
+            this.lblCateg.Size = new System.Drawing.Size(96, 25);
             this.lblCateg.TabIndex = 12;
             this.lblCateg.Text = "Categoria";
             // 
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesc.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesc.ForeColor = System.Drawing.Color.White;
-            this.lblDesc.Location = new System.Drawing.Point(338, 102);
+            this.lblDesc.Location = new System.Drawing.Point(321, 99);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(92, 20);
+            this.lblDesc.Size = new System.Drawing.Size(112, 25);
             this.lblDesc.TabIndex = 13;
             this.lblDesc.Text = "Descripcion";
             // 
             // labelPrecio
             // 
             this.labelPrecio.AutoSize = true;
-            this.labelPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrecio.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrecio.ForeColor = System.Drawing.Color.White;
-            this.labelPrecio.Location = new System.Drawing.Point(367, 59);
+            this.labelPrecio.Location = new System.Drawing.Point(365, 56);
             this.labelPrecio.Name = "labelPrecio";
-            this.labelPrecio.Size = new System.Drawing.Size(53, 20);
+            this.labelPrecio.Size = new System.Drawing.Size(65, 25);
             this.labelPrecio.TabIndex = 14;
             this.labelPrecio.Text = "Precio";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(106, 147);
+            this.label5.Location = new System.Drawing.Point(93, 147);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 20);
+            this.label5.Size = new System.Drawing.Size(58, 25);
             this.label5.TabIndex = 15;
             this.label5.Text = "Stock";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(103, 102);
+            this.label6.Location = new System.Drawing.Point(86, 102);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 20);
+            this.label6.Size = new System.Drawing.Size(65, 25);
             this.label6.TabIndex = 16;
             this.label6.Text = "Marca";
             // 

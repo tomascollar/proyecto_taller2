@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoTaller2.CapaPresentacion.Administrador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,26 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using static System.Net.Mime.MediaTypeNames;
 
-
-namespace ProyectoTaller2.CapaPresentacion.SuperAdmin
+namespace ProyectoTaller2.Capa_Presentacion.Vendedor
 {
-    
-    public partial class FormRegistroCliente : Form
+    public partial class Editar_Cliente : Form
     {
-        private Iform _form;
 
         DialogResult ask;
-        public FormRegistroCliente(Iform form)
+        private Iform _form;
+        public Editar_Cliente(Iform form)
         {
             InitializeComponent();
             _form = form;
         }
-
-        ErrorProvider errorP = new ErrorProvider();
 
         private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -64,13 +58,11 @@ namespace ProyectoTaller2.CapaPresentacion.SuperAdmin
                 errorP.Clear();
         }
 
-        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-        }
 
-        private void btnRegistrarCliente_Click(object sender, EventArgs e)
+        ErrorProvider errorP = new ErrorProvider();
+        private void btnEditarCliente_Click(object sender, EventArgs e)
         {
+
             bool validaDNI = Validar.txtVacios(txtDni);
             if (validaDNI)
                 errorP.SetError(txtDni, "Debe completar este campo");
@@ -113,32 +105,42 @@ namespace ProyectoTaller2.CapaPresentacion.SuperAdmin
             {
                 MessageBox.Show("Debe ingresar un email valido");
             }
-            else { 
-            
-            if (!validaDireccion && !validaApellido && !validaTelefono && !validaDNI && !validaNombre && !validaEmail)
+            else
             {
 
-                ask = MessageBox.Show("Seguro que desea insertar un nuevo Cliente?", "Confirmar Insercion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (!validaDireccion && !validaApellido && !validaTelefono && !validaDNI && !validaNombre && !validaEmail)
+                {
+
+                    ask = MessageBox.Show("Seguro que desea editar este Cliente?", "Confirmar Insercion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                }
+                if (ask == DialogResult.Yes)
+                {
+                    MessageBox.Show("El cliente " + txtDni.Text +
+                        " se editó correctamente", "Guardar",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                    int DNI = Convert.ToInt32(txtDni.Text);
+                    string nombre = txtNombre.Text;
+                    string apellido = txtApellido.Text;
+                    string telefono = txtTelefono.Text;
+                    string direccion = txtDireccion.Text;
+
+                    this.Close();
+                    FormCliente form = new FormCliente(_form);
+                    _form.openChildForm(form);
+                }
             }
-            if (ask == DialogResult.Yes)
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            var msg = MessageBox.Show("Seguro desea cancelar la edicion?", "Cancelar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (msg == DialogResult.Yes)
             {
-                MessageBox.Show("El cliente " + txtDni.Text +
-                    " se insertó correctamente", "Guardar",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-                int DNI = Convert.ToInt32(txtDni.Text);
-                string nombre = txtNombre.Text;
-                string apellido = txtApellido.Text;
-                string telefono = txtTelefono.Text;
-                string direccion = txtDireccion.Text;
-
-                
-                FormCliente form = new FormCliente(_form);
-                _form.openChildForm(form);
-            }
+                this.Close();
             }
         }
-    } 
-    
+    }
 }

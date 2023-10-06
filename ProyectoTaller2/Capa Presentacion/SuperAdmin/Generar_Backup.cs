@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoTaller2.CapaPresentacion.SuperAdmin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,15 @@ using System.Windows.Forms;
 
 namespace ProyectoTaller2.Capa_Presentacion.SuperAdmin
 {
-    public partial class Movimientos : Form
+    public partial class Generar_Backup : Form
     {
-        public Movimientos()
+        private InterfaceSuper _form;
+        public Generar_Backup(InterfaceSuper form)
         {
             InitializeComponent();
+            _form = form;
         }
+
+        
     }
 }

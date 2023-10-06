@@ -101,7 +101,15 @@ namespace ProyectoTaller2.Capa_Presentacion.Administrador
             {
 
                 dataGridProductos.Rows.RemoveAt(filaSeleccionada);
-                
+
+
+                txtNombreProd.Clear();
+                txtMarcaProd.Clear();
+                txtStockProd.Clear();
+                txtDescripProd.Clear();
+                txtPrecioProd.Clear();
+                comboCategoriaProd.SelectedItem = null;
+
             }
         }
 

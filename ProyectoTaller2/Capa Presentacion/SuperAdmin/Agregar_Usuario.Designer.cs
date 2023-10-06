@@ -47,105 +47,110 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(268, 147);
+            this.lblNombre.Location = new System.Drawing.Point(98, 140);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(73, 21);
+            this.lblNombre.Size = new System.Drawing.Size(85, 25);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre";
             // 
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefono.ForeColor = System.Drawing.Color.White;
-            this.lblTelefono.Location = new System.Drawing.Point(268, 212);
+            this.lblTelefono.Location = new System.Drawing.Point(95, 251);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(77, 21);
+            this.lblTelefono.Size = new System.Drawing.Size(88, 25);
             this.lblTelefono.TabIndex = 2;
             this.lblTelefono.Text = "Telefono";
             // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido.ForeColor = System.Drawing.Color.White;
-            this.lblApellido.Location = new System.Drawing.Point(273, 181);
+            this.lblApellido.Location = new System.Drawing.Point(98, 197);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(72, 21);
+            this.lblApellido.Size = new System.Drawing.Size(83, 25);
             this.lblApellido.TabIndex = 3;
             this.lblApellido.Text = "Apellido";
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(276, 246);
+            this.lblUsuario.Location = new System.Drawing.Point(482, 141);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(68, 21);
+            this.lblUsuario.Size = new System.Drawing.Size(77, 25);
             this.lblUsuario.TabIndex = 4;
             this.lblUsuario.Text = "Usuario";
             // 
             // lblPass
             // 
             this.lblPass.AutoSize = true;
-            this.lblPass.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPass.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPass.ForeColor = System.Drawing.Color.White;
-            this.lblPass.Location = new System.Drawing.Point(248, 281);
+            this.lblPass.Location = new System.Drawing.Point(449, 193);
             this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(97, 21);
+            this.lblPass.Size = new System.Drawing.Size(110, 25);
             this.lblPass.TabIndex = 5;
             this.lblPass.Text = "Contraseña";
             // 
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipo.Font = new System.Drawing.Font("Microsoft YaHei Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipo.ForeColor = System.Drawing.Color.White;
-            this.lblTipo.Location = new System.Drawing.Point(213, 318);
+            this.lblTipo.Location = new System.Drawing.Point(411, 250);
             this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(128, 21);
+            this.lblTipo.Size = new System.Drawing.Size(148, 25);
             this.lblTipo.TabIndex = 6;
             this.lblTipo.Text = "Tipo de usuario";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(362, 147);
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(189, 141);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(144, 20);
+            this.txtNombre.Size = new System.Drawing.Size(144, 26);
             this.txtNombre.TabIndex = 8;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(362, 181);
+            this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido.Location = new System.Drawing.Point(189, 196);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(144, 20);
+            this.txtApellido.Size = new System.Drawing.Size(144, 26);
             this.txtApellido.TabIndex = 9;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(362, 212);
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(189, 251);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(144, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(144, 26);
             this.txtTelefono.TabIndex = 10;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(362, 246);
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(565, 139);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(144, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(144, 26);
             this.txtUsuario.TabIndex = 11;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(362, 281);
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(565, 192);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(144, 20);
+            this.txtPass.Size = new System.Drawing.Size(144, 26);
             this.txtPass.TabIndex = 12;
             // 
             // label1
@@ -153,7 +158,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(265, 58);
+            this.label1.Location = new System.Drawing.Point(276, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(265, 38);
             this.label1.TabIndex = 14;
@@ -161,24 +166,28 @@
             // 
             // comboBoxTipo
             // 
+            this.comboBoxTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTipo.FormattingEnabled = true;
-            this.comboBoxTipo.Location = new System.Drawing.Point(362, 321);
+            this.comboBoxTipo.Location = new System.Drawing.Point(565, 250);
             this.comboBoxTipo.Name = "comboBoxTipo";
-            this.comboBoxTipo.Size = new System.Drawing.Size(144, 21);
+            this.comboBoxTipo.Size = new System.Drawing.Size(144, 28);
             this.comboBoxTipo.TabIndex = 15;
             // 
             // botonAgregaUsuario
             // 
-            this.botonAgregaUsuario.BackColor = System.Drawing.Color.White;
+            this.botonAgregaUsuario.BackColor = System.Drawing.Color.Black;
+            this.botonAgregaUsuario.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.botonAgregaUsuario.FlatAppearance.BorderSize = 2;
             this.botonAgregaUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonAgregaUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonAgregaUsuario.IconChar = FontAwesome.Sharp.IconChar.Portrait;
-            this.botonAgregaUsuario.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.botonAgregaUsuario.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F);
+            this.botonAgregaUsuario.ForeColor = System.Drawing.Color.White;
+            this.botonAgregaUsuario.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.botonAgregaUsuario.IconColor = System.Drawing.Color.White;
             this.botonAgregaUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.botonAgregaUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.botonAgregaUsuario.Location = new System.Drawing.Point(362, 369);
+            this.botonAgregaUsuario.Location = new System.Drawing.Point(345, 354);
             this.botonAgregaUsuario.Name = "botonAgregaUsuario";
-            this.botonAgregaUsuario.Size = new System.Drawing.Size(125, 52);
+            this.botonAgregaUsuario.Size = new System.Drawing.Size(134, 56);
             this.botonAgregaUsuario.TabIndex = 16;
             this.botonAgregaUsuario.Text = "Agregar\r\nUsuario";
             this.botonAgregaUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

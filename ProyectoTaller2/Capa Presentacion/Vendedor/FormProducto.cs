@@ -35,14 +35,7 @@ namespace ProyectoTaller2
 
 
         ErrorProvider errorP = new ErrorProvider(); 
-        private void btnBuscarProd_Click(object sender, EventArgs e)
-        {
-            bool valida = Validar.txtVacios(txtBuscar);
-            if (valida)
-                errorP.SetError(txtBuscar, "Debe completar este campo");
-            else
-                errorP.Clear();
-        }
+       
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
@@ -63,6 +56,15 @@ namespace ProyectoTaller2
         {
             _form.ActivateButton(sender, RGBColors.color1);
             _form.openChildForm(new FormVenta(_form, dataGridView1));
+        }
+
+        private void btnBuscarProd_Click(object sender, EventArgs e)
+        {
+            bool valida = Validar.txtVacios(txtBuscar);
+            if (valida)
+                errorP.SetError(txtBuscar, "Debe completar este campo");
+            else
+                errorP.Clear();
         }
     }
 }

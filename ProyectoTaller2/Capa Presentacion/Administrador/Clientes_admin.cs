@@ -8,19 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoTaller2.Capa_Presentacion.SuperAdmin
+namespace ProyectoTaller2.CapaPresentacion.Administrador
 {
 
     
-    public partial class Clientes_superadmin : Form
+    public partial class Clientes_admin : Form
     {
-        public Clientes_superadmin()
+        public Clientes_admin()
         {
             InitializeComponent();
 
         }
 
-        private void Clientes_superadmin_Load(object sender, EventArgs e)
+        private void Clientes_admin_Load(object sender, EventArgs e)
         {
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;

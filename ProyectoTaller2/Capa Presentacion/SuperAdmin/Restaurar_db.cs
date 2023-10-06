@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoTaller2.Capa_Presentacion.Administrador
+namespace ProyectoTaller2.Capa_Presentacion.SuperAdmin
 {
-    public partial class FormComprasAdmin : Form
+    public partial class Restaurar_db : Form
     {
-        public FormComprasAdmin()
+        public Restaurar_db()
         {
             InitializeComponent();
         }

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
+
 //Libreria de los iconos
 using FontAwesome.Sharp;
 using ProyectoTaller2.Capa_Presentacion.SuperAdmin;
@@ -251,17 +252,10 @@ namespace ProyectoTaller2.CapaPresentacion.SuperAdmin
             openChildForm(new Gestionar_Usuarios(this));
         }
 
-        private void btnMovimientos_Click(object sender, EventArgs e)
+        private void btnBackup_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color3);
-            openChildForm(new Movimientos()); 
-        }
-
-        private void btnClientes_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color5);
-            openChildForm(new Clientes_superadmin());
-         //  openChildForm(new FormRegistroCliente(_form));
+            ActivateButton(sender, RGBColors.color4);
+            openChildForm(new Backup_Restore(this));
         }
     }
 }
