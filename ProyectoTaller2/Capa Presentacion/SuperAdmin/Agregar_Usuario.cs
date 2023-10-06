@@ -90,9 +90,13 @@ namespace ProyectoTaller2.Capa_Presentacion.SuperAdmin
                 errorP.Clear();
 
 
-            if ( !validaApellido && !validaTelefono && !validaNombre && !validaPass && !validaUsuario)
+            if ( !validaApellido && !validaTelefono && !validaNombre && !validaPass && !validaUsuario && comboBoxTipo.SelectedIndex != -1)
             {
                 ask = MessageBox.Show("Seguro que desea insertar un nuevo Cliente?", "Confirmar Insercion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
+            else
+            {
+                MessageBox.Show("Debe completar todos los campos","Campos Vacios",MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             if (ask == DialogResult.Yes)
             {
