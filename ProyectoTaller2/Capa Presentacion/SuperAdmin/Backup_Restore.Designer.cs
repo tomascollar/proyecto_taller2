@@ -69,6 +69,7 @@
             this.btnRestore.Text = "Restaurar DB";
             this.btnRestore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRestore.UseVisualStyleBackColor = false;
+            this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
             // 
             // Backup_Restore
             // 

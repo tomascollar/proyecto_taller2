@@ -26,5 +26,10 @@ namespace ProyectoTaller2.Capa_Presentacion.SuperAdmin
 
             _form.openChildForm(new Generar_Backup(_form));
         }
+
+        private void btnRestore_Click(object sender, EventArgs e)
+        {
+            _form.openChildForm(new Restaurar_Backup());
+        }
     }
 }

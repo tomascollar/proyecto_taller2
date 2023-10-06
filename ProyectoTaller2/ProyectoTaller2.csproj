@@ -147,11 +147,11 @@
     <Compile Include="Capa Presentacion\SuperAdmin\Form_SuperAdmin.Designer.cs">
       <DependentUpon>Form_SuperAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Capa Presentacion\SuperAdmin\Restaurar_db.cs">
+    <Compile Include="Capa Presentacion\SuperAdmin\Restaurar_Backup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Capa Presentacion\SuperAdmin\Restaurar_db.Designer.cs">
-      <DependentUpon>Restaurar_db.cs</DependentUpon>
+    <Compile Include="Capa Presentacion\SuperAdmin\Restaurar_Backup.Designer.cs">
+      <DependentUpon>Restaurar_Backup.cs</DependentUpon>
     </Compile>
     <Compile Include="Capa Presentacion\Vendedor\Editar_Cliente.cs">
       <SubType>Form</SubType>
@@ -281,8 +281,8 @@
     <EmbeddedResource Include="Capa Presentacion\SuperAdmin\Gestionar_Usuarios.resx">
       <DependentUpon>Gestionar_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Capa Presentacion\SuperAdmin\Restaurar_db.resx">
-      <DependentUpon>Restaurar_db.cs</DependentUpon>
+    <EmbeddedResource Include="Capa Presentacion\SuperAdmin\Restaurar_Backup.resx">
+      <DependentUpon>Restaurar_Backup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Capa Presentacion\Vendedor\Editar_Cliente.resx">
       <DependentUpon>Editar_Cliente.cs</DependentUpon>

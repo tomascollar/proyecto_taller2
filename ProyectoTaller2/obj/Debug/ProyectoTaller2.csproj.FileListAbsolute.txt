@@ -136,7 +136,6 @@ C:\Users\tomas\OneDrive\Escritorio\ProyectoTaller2\ProyectoTaller2\obj\Debug\Pro
 C:\Users\tomas\OneDrive\Escritorio\ProyectoTaller2\ProyectoTaller2\obj\Debug\ProyectoTaller2.CapaPresentacion.Administrador.Clientes_admin.resources
 C:\Users\tomas\OneDrive\Escritorio\ProyectoTaller2\ProyectoTaller2\obj\Debug\ProyectoTaller2.Capa_Presentacion.SuperAdmin.Backup_Restore.resources
 C:\Users\tomas\OneDrive\Escritorio\ProyectoTaller2\ProyectoTaller2\obj\Debug\ProyectoTaller2.Capa_Presentacion.SuperAdmin.Generar_Backup.resources
-C:\Users\tomas\OneDrive\Escritorio\ProyectoTaller2\ProyectoTaller2\obj\Debug\ProyectoTaller2.Capa_Presentacion.SuperAdmin.Restaurar_db.resources
 C:\Users\tomas\OneDrive\Escritorio\ProyectoTaller2\ProyectoTaller2\obj\Debug\ProyectoTaller2.Capa_Presentacion.Vendedor.Editar_Cliente.resources
 C:\Users\tomas\OneDrive\Documentos\ProyectoTaller2\ProyectoTaller2\bin\Debug\ProyectoTaller2.exe.config
 C:\Users\tomas\OneDrive\Documentos\ProyectoTaller2\ProyectoTaller2\bin\Debug\ProyectoTaller2.exe
@@ -173,3 +172,4 @@ C:\Users\tomas\OneDrive\Documentos\ProyectoTaller2\ProyectoTaller2\obj\Debug\Pro
 C:\Users\tomas\OneDrive\Documentos\ProyectoTaller2\ProyectoTaller2\obj\Debug\ProyectoTaller2.exe
 C:\Users\tomas\OneDrive\Documentos\ProyectoTaller2\ProyectoTaller2\obj\Debug\ProyectoTaller2.pdb
 C:\Users\tomas\OneDrive\Escritorio\ProyectoTaller2\ProyectoTaller2\obj\Debug\ProyectoTaller2.Capa_Presentacion.Administrador.Reporte_ventas.resources
+C:\Users\tomas\OneDrive\Escritorio\ProyectoTaller2\ProyectoTaller2\obj\Debug\ProyectoTaller2.Capa_Presentacion.SuperAdmin.Restaurar_Backup.resources
