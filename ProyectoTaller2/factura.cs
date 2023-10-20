@@ -22,13 +22,11 @@ namespace ProyectoTaller2
     
         public int id_factura { get; set; }
         public System.DateTime fecha { get; set; }
-        public long importe_total { get; set; }
+        public string tipo_pago { get; set; }
         public int id_cliente { get; set; }
-        public int id_pago { get; set; }
         public int id_usuario { get; set; }
     
         public virtual clientes clientes { get; set; }
-        public virtual pago pago { get; set; }
         public virtual usuario usuario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<factura_detalle> factura_detalle { get; set; }

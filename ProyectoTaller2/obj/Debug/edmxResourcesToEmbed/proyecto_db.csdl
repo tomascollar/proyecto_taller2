@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="id_categoria" />
     </Key>
-    <Property Name="id_categoria" Type="Int32" Nullable="false" />
+    <Property Name="id_categoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="descripcion_categoria" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="productos" Relationship="Self.FK_id_categoria" FromRole="categoria" ToRole="productos" />
   </EntityType>
@@ -12,7 +12,7 @@
     <Key>
       <PropertyRef Name="id_cliente" />
     </Key>
-    <Property Name="id_cliente" Type="Int32" Nullable="false" />
+    <Property Name="id_cliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre_cliente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="apellido_cliente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="DNI_cliente" Type="Int32" Nullable="false" />
@@ -24,14 +24,12 @@
     <Key>
       <PropertyRef Name="id_factura" />
     </Key>
-    <Property Name="id_factura" Type="Int32" Nullable="false" />
+    <Property Name="id_factura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="importe_total" Type="Int64" Nullable="false" />
+    <Property Name="tipo_pago" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="id_cliente" Type="Int32" Nullable="false" />
-    <Property Name="id_pago" Type="Int32" Nullable="false" />
     <Property Name="id_usuario" Type="Int32" Nullable="false" />
     <NavigationProperty Name="clientes" Relationship="Self.FK_id_cliente" FromRole="factura" ToRole="clientes" />
-    <NavigationProperty Name="pago" Relationship="Self.FK_id_pago" FromRole="factura" ToRole="pago" />
     <NavigationProperty Name="usuario" Relationship="Self.FK_id_usuario" FromRole="factura" ToRole="usuario" />
     <NavigationProperty Name="factura_detalle" Relationship="Self.FK_id_venta" FromRole="factura" ToRole="factura_detalle" />
   </EntityType>
@@ -39,10 +37,10 @@
     <Key>
       <PropertyRef Name="id_venta_detalle" />
     </Key>
-    <Property Name="id_venta_detalle" Type="Int32" Nullable="false" />
+    <Property Name="id_venta_detalle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="id_producto" Type="Int32" Nullable="false" />
     <Property Name="id_factura" Type="Int32" Nullable="false" />
-    <Property Name="importe" Type="Int64" Nullable="false" />
+    <Property Name="importe_total" Type="Int64" Nullable="false" />
     <NavigationProperty Name="factura" Relationship="Self.FK_id_venta" FromRole="factura_detalle" ToRole="factura" />
     <NavigationProperty Name="productos" Relationship="Self.FK_id_producto" FromRole="factura_detalle" ToRole="productos" />
   </EntityType>
@@ -50,24 +48,15 @@
     <Key>
       <PropertyRef Name="id_marca" />
     </Key>
-    <Property Name="id_marca" Type="Int32" Nullable="false" />
+    <Property Name="id_marca" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="descripcion_marca" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="productos" Relationship="Self.FK_id_marca" FromRole="marca" ToRole="productos" />
-  </EntityType>
-  <EntityType Name="pago">
-    <Key>
-      <PropertyRef Name="id_pago" />
-    </Key>
-    <Property Name="id_pago" Type="Int32" Nullable="false" />
-    <Property Name="tipo_pago" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="monto_total" Type="Int64" Nullable="false" />
-    <NavigationProperty Name="factura" Relationship="Self.FK_id_pago" FromRole="pago" ToRole="factura" />
   </EntityType>
   <EntityType Name="productos">
     <Key>
       <PropertyRef Name="id_producto" />
     </Key>
-    <Property Name="id_producto" Type="Int32" Nullable="false" />
+    <Property Name="id_producto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre_producto" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="id_marca" Type="Int32" Nullable="false" />
     <Property Name="stock" Type="Int32" Nullable="false" />
@@ -82,9 +71,8 @@
     <Key>
       <PropertyRef Name="id_tipo_usuario" />
     </Key>
-    <Property Name="id_tipo_usuario" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="descripcion_tipo_usuario" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="usuario" Relationship="Self.FK_id_tipo_usuario" FromRole="tipo_usuario" ToRole="usuario" />
   </EntityType>
   <EntityType Name="usuario">
     <Key>
@@ -119,18 +107,6 @@
       </Principal>
       <Dependent Role="factura">
         <PropertyRef Name="id_cliente" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_id_pago">
-    <End Role="pago" Type="Self.pago" Multiplicity="1" />
-    <End Role="factura" Type="Self.factura" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="pago">
-        <PropertyRef Name="id_pago" />
-      </Principal>
-      <Dependent Role="factura">
-        <PropertyRef Name="id_pago" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -182,25 +158,12 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_id_tipo_usuario">
-    <End Role="tipo_usuario" Type="Self.tipo_usuario" Multiplicity="1" />
-    <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tipo_usuario">
-        <PropertyRef Name="id_tipo_usuario" />
-      </Principal>
-      <Dependent Role="usuario">
-        <PropertyRef Name="id_tipo_usuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="proyecto_taller2Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="categoria" EntityType="Self.categoria" />
     <EntitySet Name="clientes" EntityType="Self.clientes" />
     <EntitySet Name="factura" EntityType="Self.factura" />
     <EntitySet Name="factura_detalle" EntityType="Self.factura_detalle" />
     <EntitySet Name="marca" EntityType="Self.marca" />
-    <EntitySet Name="pago" EntityType="Self.pago" />
     <EntitySet Name="productos" EntityType="Self.productos" />
     <EntitySet Name="tipo_usuario" EntityType="Self.tipo_usuario" />
     <EntitySet Name="usuario" EntityType="Self.usuario" />
@@ -210,10 +173,6 @@
     </AssociationSet>
     <AssociationSet Name="FK_id_cliente" Association="Self.FK_id_cliente">
       <End Role="clientes" EntitySet="clientes" />
-      <End Role="factura" EntitySet="factura" />
-    </AssociationSet>
-    <AssociationSet Name="FK_id_pago" Association="Self.FK_id_pago">
-      <End Role="pago" EntitySet="pago" />
       <End Role="factura" EntitySet="factura" />
     </AssociationSet>
     <AssociationSet Name="FK_id_usuario" Association="Self.FK_id_usuario">
@@ -231,10 +190,6 @@
     <AssociationSet Name="FK_id_marca" Association="Self.FK_id_marca">
       <End Role="marca" EntitySet="marca" />
       <End Role="productos" EntitySet="productos" />
-    </AssociationSet>
-    <AssociationSet Name="FK_id_tipo_usuario" Association="Self.FK_id_tipo_usuario">
-      <End Role="tipo_usuario" EntitySet="tipo_usuario" />
-      <End Role="usuario" EntitySet="usuario" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

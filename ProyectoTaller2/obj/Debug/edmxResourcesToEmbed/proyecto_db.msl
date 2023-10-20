@@ -26,9 +26,8 @@
         <MappingFragment StoreEntitySet="factura">
           <ScalarProperty Name="id_factura" ColumnName="id_factura" />
           <ScalarProperty Name="fecha" ColumnName="fecha" />
-          <ScalarProperty Name="importe_total" ColumnName="importe_total" />
+          <ScalarProperty Name="tipo_pago" ColumnName="tipo_pago" />
           <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
-          <ScalarProperty Name="id_pago" ColumnName="id_pago" />
           <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -39,7 +38,7 @@
           <ScalarProperty Name="id_venta_detalle" ColumnName="id_venta_detalle" />
           <ScalarProperty Name="id_producto" ColumnName="id_producto" />
           <ScalarProperty Name="id_factura" ColumnName="id_factura" />
-          <ScalarProperty Name="importe" ColumnName="importe" />
+          <ScalarProperty Name="importe_total" ColumnName="importe_total" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -48,15 +47,6 @@
         <MappingFragment StoreEntitySet="marca">
           <ScalarProperty Name="id_marca" ColumnName="id_marca" />
           <ScalarProperty Name="descripcion_marca" ColumnName="descripcion_marca" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="pago">
-      <EntityTypeMapping TypeName="proyecto_taller2Model.pago">
-        <MappingFragment StoreEntitySet="pago">
-          <ScalarProperty Name="id_pago" ColumnName="id_pago" />
-          <ScalarProperty Name="tipo_pago" ColumnName="tipo_pago" />
-          <ScalarProperty Name="monto_total" ColumnName="monto_total" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

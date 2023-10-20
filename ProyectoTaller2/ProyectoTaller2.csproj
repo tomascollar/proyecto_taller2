@@ -201,7 +201,7 @@
     <Compile Include="Capa Presentacion\Vendedor\FormVenta.Designer.cs">
       <DependentUpon>FormVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="CapaDatos.cs" />
+    <Compile Include="Capa Datos\DatosUsuario.cs" />
     <Compile Include="categoria.cs">
       <DependentUpon>proyecto_db.tt</DependentUpon>
     </Compile>
@@ -217,10 +217,7 @@
     <Compile Include="marca.cs">
       <DependentUpon>proyecto_db.tt</DependentUpon>
     </Compile>
-    <Compile Include="NegocioUsuario.cs" />
-    <Compile Include="pago.cs">
-      <DependentUpon>proyecto_db.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Capa Negocio\NegocioUsuario.cs" />
     <Compile Include="productos.cs">
       <DependentUpon>proyecto_db.tt</DependentUpon>
     </Compile>
@@ -371,17 +368,19 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\User-Login-200.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="proyecto_db.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>proyecto_db.Context.cs</LastGenOutput>
       <DependentUpon>proyecto_db.edmx</DependentUpon>
+      <LastGenOutput>proyecto_db.Context.cs</LastGenOutput>
     </Content>
     <Content Include="proyecto_db.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>proyecto_db.edmx</DependentUpon>
       <LastGenOutput>proyecto_db.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\User-Login-200.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

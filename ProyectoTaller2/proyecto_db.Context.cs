@@ -30,7 +30,6 @@ namespace ProyectoTaller2
         public virtual DbSet<factura> factura { get; set; }
         public virtual DbSet<factura_detalle> factura_detalle { get; set; }
         public virtual DbSet<marca> marca { get; set; }
-        public virtual DbSet<pago> pago { get; set; }
         public virtual DbSet<productos> productos { get; set; }
         public virtual DbSet<tipo_usuario> tipo_usuario { get; set; }
         public virtual DbSet<usuario> usuario { get; set; }

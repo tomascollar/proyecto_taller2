@@ -17,7 +17,7 @@ namespace ProyectoTaller2
         public int id_venta_detalle { get; set; }
         public int id_producto { get; set; }
         public int id_factura { get; set; }
-        public long importe { get; set; }
+        public long importe_total { get; set; }
     
         public virtual factura factura { get; set; }
         public virtual productos productos { get; set; }

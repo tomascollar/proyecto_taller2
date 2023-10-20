@@ -4,14 +4,14 @@
     <Key>
       <PropertyRef Name="id_categoria" />
     </Key>
-    <Property Name="id_categoria" Type="int" Nullable="false" />
+    <Property Name="id_categoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="descripcion_categoria" Type="varchar" MaxLength="30" Nullable="false" />
   </EntityType>
   <EntityType Name="clientes">
     <Key>
       <PropertyRef Name="id_cliente" />
     </Key>
-    <Property Name="id_cliente" Type="int" Nullable="false" />
+    <Property Name="id_cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nombre_cliente" Type="varchar" MaxLength="20" />
     <Property Name="apellido_cliente" Type="varchar" MaxLength="20" />
     <Property Name="DNI_cliente" Type="int" Nullable="false" />
@@ -22,42 +22,33 @@
     <Key>
       <PropertyRef Name="id_factura" />
     </Key>
-    <Property Name="id_factura" Type="int" Nullable="false" />
+    <Property Name="id_factura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="fecha" Type="date" Nullable="false" />
-    <Property Name="importe_total" Type="bigint" Nullable="false" />
+    <Property Name="tipo_pago" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="id_cliente" Type="int" Nullable="false" />
-    <Property Name="id_pago" Type="int" Nullable="false" />
     <Property Name="id_usuario" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="factura_detalle">
     <Key>
       <PropertyRef Name="id_venta_detalle" />
     </Key>
-    <Property Name="id_venta_detalle" Type="int" Nullable="false" />
+    <Property Name="id_venta_detalle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_producto" Type="int" Nullable="false" />
     <Property Name="id_factura" Type="int" Nullable="false" />
-    <Property Name="importe" Type="bigint" Nullable="false" />
+    <Property Name="importe_total" Type="bigint" Nullable="false" />
   </EntityType>
   <EntityType Name="marca">
     <Key>
       <PropertyRef Name="id_marca" />
     </Key>
-    <Property Name="id_marca" Type="int" Nullable="false" />
+    <Property Name="id_marca" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="descripcion_marca" Type="varchar" MaxLength="30" Nullable="false" />
-  </EntityType>
-  <EntityType Name="pago">
-    <Key>
-      <PropertyRef Name="id_pago" />
-    </Key>
-    <Property Name="id_pago" Type="int" Nullable="false" />
-    <Property Name="tipo_pago" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="monto_total" Type="bigint" Nullable="false" />
   </EntityType>
   <EntityType Name="productos">
     <Key>
       <PropertyRef Name="id_producto" />
     </Key>
-    <Property Name="id_producto" Type="int" Nullable="false" />
+    <Property Name="id_producto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nombre_producto" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="id_marca" Type="int" Nullable="false" />
     <Property Name="stock" Type="int" Nullable="false" />
@@ -69,7 +60,7 @@
     <Key>
       <PropertyRef Name="id_tipo_usuario" />
     </Key>
-    <Property Name="id_tipo_usuario" Type="int" Nullable="false" />
+    <Property Name="id_tipo_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="descripcion_tipo_usuario" Type="varchar" MaxLength="15" Nullable="false" />
   </EntityType>
   <EntityType Name="usuario">
@@ -120,18 +111,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_id_pago">
-    <End Role="pago" Type="Self.pago" Multiplicity="1" />
-    <End Role="factura" Type="Self.factura" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="pago">
-        <PropertyRef Name="id_pago" />
-      </Principal>
-      <Dependent Role="factura">
-        <PropertyRef Name="id_pago" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_id_producto">
     <End Role="productos" Type="Self.productos" Multiplicity="1" />
     <End Role="factura_detalle" Type="Self.factura_detalle" Multiplicity="*" />
@@ -141,18 +120,6 @@
       </Principal>
       <Dependent Role="factura_detalle">
         <PropertyRef Name="id_producto" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_id_tipo_usuario">
-    <End Role="tipo_usuario" Type="Self.tipo_usuario" Multiplicity="1" />
-    <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tipo_usuario">
-        <PropertyRef Name="id_tipo_usuario" />
-      </Principal>
-      <Dependent Role="usuario">
-        <PropertyRef Name="id_tipo_usuario" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -186,7 +153,6 @@
     <EntitySet Name="factura" EntityType="Self.factura" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="factura_detalle" EntityType="Self.factura_detalle" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="marca" EntityType="Self.marca" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="pago" EntityType="Self.pago" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="productos" EntityType="Self.productos" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tipo_usuario" EntityType="Self.tipo_usuario" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
@@ -202,17 +168,9 @@
       <End Role="marca" EntitySet="marca" />
       <End Role="productos" EntitySet="productos" />
     </AssociationSet>
-    <AssociationSet Name="FK_id_pago" Association="Self.FK_id_pago">
-      <End Role="pago" EntitySet="pago" />
-      <End Role="factura" EntitySet="factura" />
-    </AssociationSet>
     <AssociationSet Name="FK_id_producto" Association="Self.FK_id_producto">
       <End Role="productos" EntitySet="productos" />
       <End Role="factura_detalle" EntitySet="factura_detalle" />
-    </AssociationSet>
-    <AssociationSet Name="FK_id_tipo_usuario" Association="Self.FK_id_tipo_usuario">
-      <End Role="tipo_usuario" EntitySet="tipo_usuario" />
-      <End Role="usuario" EntitySet="usuario" />
     </AssociationSet>
     <AssociationSet Name="FK_id_usuario" Association="Self.FK_id_usuario">
       <End Role="usuario" EntitySet="usuario" />

@@ -7,7 +7,7 @@ using System.Windows.Documents;
 
 namespace ProyectoTaller2
 {
-    internal class CapaDatos
+    internal class DatosUsuario
     {
         public void InsertarUsuario(usuario nuevoUsuario)
         {

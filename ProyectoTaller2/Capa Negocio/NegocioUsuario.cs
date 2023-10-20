@@ -13,7 +13,7 @@ namespace ProyectoTaller2
     {
 
 
-        private CapaDatos datos = new CapaDatos();
+        private DatosUsuario datos = new DatosUsuario();
 
         public bool AgregarUsuario(string nombre, string apellido, string telefono, string usuario, string contraseña, int tipo_usuario)
         {
