@@ -81,8 +81,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Capa Datos\DatosCategoria.cs" />
     <Compile Include="Capa Datos\DatosCliente.cs" />
+    <Compile Include="Capa Datos\DatosFactura.cs" />
+    <Compile Include="Capa Datos\DatosMarca.cs" />
+    <Compile Include="Capa Datos\DatosProducto.cs" />
     <Compile Include="Capa Negocio\NegocioCliente.cs" />
+    <Compile Include="Capa Negocio\NegocioMarca.cs" />
+    <Compile Include="Capa Negocio\NegocioProducto.cs" />
     <Compile Include="Capa Presentacion\Administrador\Clientes_admin.cs">
       <SubType>Form</SubType>
     </Compile>
