@@ -38,11 +38,11 @@ namespace ProyectoTaller2
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonLogin = new FontAwesome.Sharp.IconButton();
             this.btnMaximize = new FontAwesome.Sharp.IconButton();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonLogin = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +83,8 @@ namespace ProyectoTaller2
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(170, 26);
-            this.txtPassword.TabIndex = 1;
+            this.txtPassword.TabIndex = 2;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // txtUser
             // 
@@ -94,7 +95,8 @@ namespace ProyectoTaller2
             this.txtUser.Location = new System.Drawing.Point(77, 68);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(170, 26);
-            this.txtUser.TabIndex = 2;
+            this.txtUser.TabIndex = 1;
+            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // panel1
             // 
@@ -113,6 +115,25 @@ namespace ProyectoTaller2
             this.panel1.Size = new System.Drawing.Size(314, 250);
             this.panel1.TabIndex = 8;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // buttonLogin
+            // 
+            this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogin.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogin.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
+            this.buttonLogin.IconColor = System.Drawing.Color.White;
+            this.buttonLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.buttonLogin.IconSize = 35;
+            this.buttonLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonLogin.Location = new System.Drawing.Point(113, 189);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Size = new System.Drawing.Size(99, 47);
+            this.buttonLogin.TabIndex = 3;
+            this.buttonLogin.Text = "Login";
+            this.buttonLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+            this.buttonLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.buttonLogin_KeyPress);
             // 
             // btnMaximize
             // 
@@ -172,24 +193,6 @@ namespace ProyectoTaller2
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
-            // 
-            // buttonLogin
-            // 
-            this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLogin.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
-            this.buttonLogin.IconColor = System.Drawing.Color.White;
-            this.buttonLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.buttonLogin.IconSize = 35;
-            this.buttonLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonLogin.Location = new System.Drawing.Point(113, 189);
-            this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(99, 47);
-            this.buttonLogin.TabIndex = 11;
-            this.buttonLogin.Text = "Login";
-            this.buttonLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonLogin.UseVisualStyleBackColor = true;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // formLogin
             // 

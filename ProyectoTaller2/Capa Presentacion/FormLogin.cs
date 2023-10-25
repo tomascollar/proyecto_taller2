@@ -155,5 +155,19 @@ namespace ProyectoTaller2
                 MessageBox.Show("Credenciales incorrectas. Intente nuevamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void buttonLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                // Activa el botón
+                buttonLogin.PerformClick();
+            }
+        }
     }
 }

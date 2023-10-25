@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using ProyectoTaller2.CapaPresentacion.SuperAdmin;
 using ProyectoTaller2.Capa_Presentacion.Vendedor;
+using ProyectoTaller2.Capa_Negocio;
 
 namespace ProyectoTaller2
 {
@@ -27,9 +28,9 @@ namespace ProyectoTaller2
 
         private void CargarClientes()
         {
-            var negocioCliente = new NegocioUsuario();
+            var negocioCliente = new NegocioCliente();
 
-            var datos = negocioCliente.ListarUsuario();
+            var datos = negocioCliente.ListarClientes();
 
             dataGridView1.DataSource = datos;
             this.formato();
@@ -50,6 +51,7 @@ namespace ProyectoTaller2
             dataGridView1.Columns[5].HeaderText = "DIRECCION";
             dataGridView1.Columns[6].HeaderText = "EMAIL";
             dataGridView1.Columns[7].HeaderText = "ESTADO";
+            //dataGridView1.Columns[8].Visible = false;
 
         }
 

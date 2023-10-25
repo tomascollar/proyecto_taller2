@@ -30,18 +30,11 @@
         {
             this.LDniCliente = new System.Windows.Forms.Label();
             this.txtDniCliente = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.columnaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnaApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnaNombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnaDni = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnaTelCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnaEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnaDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSeleccionar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,61 +56,6 @@
             this.txtDniCliente.Size = new System.Drawing.Size(200, 20);
             this.txtDniCliente.TabIndex = 1;
             this.txtDniCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDniCliente_KeyPress);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.columnaID,
-            this.columnaApellido,
-            this.ColumnaNombreCliente,
-            this.ColumnaDni,
-            this.ColumnaTelCliente,
-            this.columnaEmail,
-            this.ColumnaDireccion});
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.dataGridView1.Location = new System.Drawing.Point(5, 140);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(658, 290);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // columnaID
-            // 
-            this.columnaID.HeaderText = "ID";
-            this.columnaID.Name = "columnaID";
-            // 
-            // columnaApellido
-            // 
-            this.columnaApellido.HeaderText = "Apellido";
-            this.columnaApellido.Name = "columnaApellido";
-            // 
-            // ColumnaNombreCliente
-            // 
-            this.ColumnaNombreCliente.HeaderText = "Nombre";
-            this.ColumnaNombreCliente.Name = "ColumnaNombreCliente";
-            // 
-            // ColumnaDni
-            // 
-            this.ColumnaDni.HeaderText = "DNI";
-            this.ColumnaDni.Name = "ColumnaDni";
-            // 
-            // ColumnaTelCliente
-            // 
-            this.ColumnaTelCliente.HeaderText = "Telefono";
-            this.ColumnaTelCliente.Name = "ColumnaTelCliente";
-            // 
-            // columnaEmail
-            // 
-            this.columnaEmail.HeaderText = "Email";
-            this.columnaEmail.Name = "columnaEmail";
-            // 
-            // ColumnaDireccion
-            // 
-            this.ColumnaDireccion.HeaderText = "Direccion";
-            this.ColumnaDireccion.Name = "ColumnaDireccion";
             // 
             // btnSeleccionar
             // 
@@ -141,7 +79,7 @@
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditar.IconSize = 30;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(669, 305);
+            this.btnEditar.Location = new System.Drawing.Point(664, 299);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(105, 47);
             this.btnEditar.TabIndex = 7;
@@ -175,7 +113,7 @@
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregar.IconSize = 30;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(669, 235);
+            this.btnAgregar.Location = new System.Drawing.Point(664, 229);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(105, 47);
             this.btnAgregar.TabIndex = 9;
@@ -184,17 +122,29 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.dataGridView1.Location = new System.Drawing.Point(4, 147);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(654, 289);
+            this.dataGridView1.TabIndex = 10;
+            // 
             // FormCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(776, 442);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnSeleccionar);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtDniCliente);
             this.Controls.Add(this.LDniCliente);
             this.Name = "FormCliente";
@@ -209,17 +159,10 @@
 
         private System.Windows.Forms.Label LDniCliente;
         private System.Windows.Forms.TextBox txtDniCliente;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private FontAwesome.Sharp.IconButton btnSeleccionar;
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnBuscar;
         private FontAwesome.Sharp.IconButton btnAgregar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnaID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnaApellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaNombreCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaDni;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaTelCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnaEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnaDireccion;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

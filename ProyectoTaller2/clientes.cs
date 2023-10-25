@@ -14,12 +14,6 @@ namespace ProyectoTaller2
     
     public partial class clientes
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public clientes()
-        {
-            this.factura = new HashSet<factura>();
-        }
-    
         public int id_cliente { get; set; }
         public string nombre_cliente { get; set; }
         public string apellido_cliente { get; set; }
@@ -28,8 +22,5 @@ namespace ProyectoTaller2
         public string direccion_cliente { get; set; }
         public string email_cliente { get; set; }
         public string estado_cliente { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<factura> factura { get; set; }
     }
 }

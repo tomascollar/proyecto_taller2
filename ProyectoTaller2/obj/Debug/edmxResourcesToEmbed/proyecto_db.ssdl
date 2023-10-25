@@ -17,8 +17,8 @@
     <Property Name="DNI_cliente" Type="int" Nullable="false" />
     <Property Name="telefono_cliente" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="direccion_cliente" Type="varchar" MaxLength="30" Nullable="false" />
-    <Property Name="email_cliente" Type="varchar" MaxLength="30" />
-    <Property Name="estado_cliente" Type="varchar" MaxLength="20" />
+    <Property Name="email_cliente" Type="varchar" MaxLength="15" />
+    <Property Name="estado_cliente" Type="varchar" MaxLength="15" />
   </EntityType>
   <EntityType Name="factura">
     <Key>
