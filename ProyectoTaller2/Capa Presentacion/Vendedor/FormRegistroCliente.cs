@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoTaller2.Capa_Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -126,13 +127,26 @@ namespace ProyectoTaller2.CapaPresentacion.SuperAdmin
                     " se insertó correctamente", "Guardar",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+             
 
-                int DNI = Convert.ToInt32(txtDni.Text);
                 string nombre = txtNombre.Text;
                 string apellido = txtApellido.Text;
+                int param_dni = Convert.ToInt32(txtDni.Text);
                 string telefono = txtTelefono.Text;
                 string direccion = txtDireccion.Text;
+                string email = txtEmail.Text;
 
+                    var estado = "Activo";
+
+                    var nuevoCliente = new NegocioCliente();
+                    nuevoCliente.AgregarCliente(nombre, apellido, param_dni, telefono, direccion, email, estado);
+
+                    txtNombre.Clear();
+                    txtApellido.Clear();
+                    txtDni.Clear();
+                    txtTelefono.Clear();
+                    txtDireccion.Clear();
+                    txtEmail.Clear();
                 
                 FormCliente form = new FormCliente(_form);
                 _form.openChildForm(form);

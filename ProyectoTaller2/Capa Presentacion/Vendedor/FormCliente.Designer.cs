@@ -198,6 +198,7 @@
             this.Controls.Add(this.txtDniCliente);
             this.Controls.Add(this.LDniCliente);
             this.Name = "FormCliente";
+            this.Load += new System.EventHandler(this.FormCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

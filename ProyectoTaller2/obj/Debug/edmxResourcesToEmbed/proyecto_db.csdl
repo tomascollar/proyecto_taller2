@@ -19,6 +19,8 @@
     <Property Name="telefono_cliente" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="direccion_cliente" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="factura" Relationship="Self.FK_id_cliente" FromRole="clientes" ToRole="factura" />
+    <Property Name="email_cliente" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="estado_cliente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="factura">
     <Key>

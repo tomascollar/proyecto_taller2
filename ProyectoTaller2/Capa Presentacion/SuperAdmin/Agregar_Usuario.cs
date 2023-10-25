@@ -145,7 +145,7 @@ namespace ProyectoTaller2.Capa_Presentacion.SuperAdmin
                 Gestionar_Usuarios form = new Gestionar_Usuarios(_form);
                 _form.openChildForm(form);
 
-            }          
+            }
 
         }
 

@@ -25,6 +25,34 @@ namespace ProyectoTaller2
             _form = form;
         }
 
+        private void CargarClientes()
+        {
+            var negocioCliente = new NegocioUsuario();
+
+            var datos = negocioCliente.ListarUsuario();
+
+            dataGridView1.DataSource = datos;
+            this.formato();
+        }
+
+        private void FormCliente_Load(object sender, EventArgs e)
+        {
+            CargarClientes();
+        }
+
+        private void formato()
+        {
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "NOMBRE";
+            dataGridView1.Columns[2].HeaderText = "APELLIDO";
+            dataGridView1.Columns[3].HeaderText = "DNI";
+            dataGridView1.Columns[4].HeaderText = "TELEFONO";
+            dataGridView1.Columns[5].HeaderText = "DIRECCION";
+            dataGridView1.Columns[6].HeaderText = "EMAIL";
+            dataGridView1.Columns[7].HeaderText = "ESTADO";
+
+        }
+
 
         ErrorProvider errorP = new ErrorProvider();
 

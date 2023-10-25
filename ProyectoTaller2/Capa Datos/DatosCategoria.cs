@@ -22,7 +22,6 @@ namespace ProyectoTaller2.Capa_Datos
             using (var context = new proyecto_taller2Entities())
             {
                 return context.categoria.ToList();
-                //ver cambios
 
             }
         }

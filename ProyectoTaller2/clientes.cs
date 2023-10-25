@@ -26,6 +26,8 @@ namespace ProyectoTaller2
         public int DNI_cliente { get; set; }
         public string telefono_cliente { get; set; }
         public string direccion_cliente { get; set; }
+        public string email_cliente { get; set; }
+        public string estado_cliente { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<factura> factura { get; set; }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="proyecto_taller2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="proyecto_taller2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="categoria">
           <Key>
             <PropertyRef Name="id_categoria" />
@@ -22,6 +22,8 @@
           <Property Name="DNI_cliente" Type="int" Nullable="false" />
           <Property Name="telefono_cliente" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="direccion_cliente" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="email_cliente" Type="varchar" MaxLength="30" />
+          <Property Name="estado_cliente" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="factura">
           <Key>
@@ -186,8 +188,7 @@
             <End Role="factura_detalle" EntitySet="factura_detalle" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="proyecto_taller2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -210,6 +211,8 @@
           <Property Name="telefono_cliente" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="direccion_cliente" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="factura" Relationship="Self.FK_id_cliente" FromRole="clientes" ToRole="factura" />
+          <Property Name="email_cliente" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="estado_cliente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="factura">
           <Key>
@@ -400,6 +403,8 @@
           <EntitySetMapping Name="clientes">
             <EntityTypeMapping TypeName="proyecto_taller2Model.clientes">
               <MappingFragment StoreEntitySet="clientes">
+                <ScalarProperty Name="estado_cliente" ColumnName="estado_cliente" />
+                <ScalarProperty Name="email_cliente" ColumnName="email_cliente" />
                 <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
                 <ScalarProperty Name="nombre_cliente" ColumnName="nombre_cliente" />
                 <ScalarProperty Name="apellido_cliente" ColumnName="apellido_cliente" />

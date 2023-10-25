@@ -12,7 +12,7 @@ namespace ProyectoTaller2.Capa_Negocio
 
         private DatosCliente datos = new DatosCliente();
 
-        public bool AgregarCliente(string nombre, string apellido, int dni, string telefono, string direccion)
+        public bool AgregarCliente(string nombre, string apellido, int dni, string telefono, string direccion, string email, string estado)
         {
             var obj = new clientes
             {
@@ -20,7 +20,9 @@ namespace ProyectoTaller2.Capa_Negocio
                 apellido_cliente = apellido,
                 DNI_cliente = dni,
                 telefono_cliente = telefono,
-                direccion_cliente = direccion
+                direccion_cliente = direccion,
+                email_cliente = email,
+                estado_cliente = estado
             };
 
             datos.InsertarCliente(obj);

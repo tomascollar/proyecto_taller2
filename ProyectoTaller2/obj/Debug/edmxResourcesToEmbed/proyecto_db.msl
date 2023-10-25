@@ -12,6 +12,8 @@
     <EntitySetMapping Name="clientes">
       <EntityTypeMapping TypeName="proyecto_taller2Model.clientes">
         <MappingFragment StoreEntitySet="clientes">
+          <ScalarProperty Name="estado_cliente" ColumnName="estado_cliente" />
+          <ScalarProperty Name="email_cliente" ColumnName="email_cliente" />
           <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
           <ScalarProperty Name="nombre_cliente" ColumnName="nombre_cliente" />
           <ScalarProperty Name="apellido_cliente" ColumnName="apellido_cliente" />
