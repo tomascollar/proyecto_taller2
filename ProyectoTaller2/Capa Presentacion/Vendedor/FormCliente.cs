@@ -83,8 +83,29 @@ namespace ProyectoTaller2
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Editar_Cliente editar = new Editar_Cliente(_form);
-            editar.Show();
+
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                //Obtengo la fila seleccionada
+                DataGridViewRow filaSeleccionada = dataGridView1.SelectedRows[0];
+
+                //Obtengo los valores de las celdas
+               // string id = filaSeleccionada.Cells[1].Value.ToString();
+                string nombre = filaSeleccionada.Cells[1].Value.ToString();
+                string apellido = filaSeleccionada.Cells[2].Value.ToString();
+                string DNI = filaSeleccionada.Cells[3].Value.ToString();
+                string telefono = filaSeleccionada.Cells[4].Value.ToString();
+                string direccion = filaSeleccionada.Cells[5].Value.ToString();
+                string email = filaSeleccionada.Cells[6].Value.ToString();
+               // string estado = filaSeleccionada.Cells[7].Value.ToString();
+
+                // Creo una instacion del formulario de edicion
+                Editar_Cliente editar_ = new Editar_Cliente(_form);
+
+                //paso los datos al formulario
+                editar_.CargarDatos(DNI, nombre, apellido, telefono, direccion, email);
+                editar_.ShowDialog();
+            }
         }
     }
 }

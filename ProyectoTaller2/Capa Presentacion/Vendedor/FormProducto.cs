@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoTaller2.Capa_Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,6 +38,30 @@ namespace ProyectoTaller2
         ErrorProvider errorP = new ErrorProvider(); 
        
 
+
+        private void CargarProductos()
+        {
+            var negocioProducto = new NegocioProducto();
+
+            var datos = negocioProducto.ListarProductos();
+
+            dataGridView1.DataSource = datos;
+            this.formato();
+
+
+        }
+
+        private void formato()
+        {
+            dataGridView1.Columns[0].HeaderText = "ID";
+            dataGridView1.Columns[1].HeaderText = "Nombre";
+            dataGridView1.Columns[2].HeaderText = "Marca";
+            dataGridView1.Columns[3].HeaderText = "Stock";
+            dataGridView1.Columns[4].HeaderText = "Precio";
+            dataGridView1.Columns[5].HeaderText = "Descripcion";
+            dataGridView1.Columns[6].HeaderText = "Categoria";
+        }
+
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             //verifica si al menos una fila esta seleccionada
@@ -65,6 +90,11 @@ namespace ProyectoTaller2
                 errorP.SetError(txtBuscar, "Debe completar este campo");
             else
                 errorP.Clear();
+        }
+
+        private void FormProducto_Load(object sender, EventArgs e)
+        {
+            CargarProductos();
         }
     }
 }

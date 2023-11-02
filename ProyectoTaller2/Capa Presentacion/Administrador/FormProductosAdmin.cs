@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoTaller2.Capa_Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,6 +49,29 @@ namespace ProyectoTaller2.Capa_Presentacion.Administrador
                 var msg = MessageBox.Show("Esta seguro de añadir este producto?", "Guardar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (msg == DialogResult.Yes)
                 {
+                    MessageBox.Show("El producto se agrego correctamente", "Agregar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    string nombre = txtNombreProd.Text;
+                    string descripcion = txtDescripProd.Text;
+                    int stock = Convert.ToInt32(txtStockProd.Text);
+                    double precio = Convert.ToDouble(txtPrecioProd.Text);
+                    //falta resolver marca
+                    //falta resolver categoria
+                    int categoria = Convert.ToInt32(comboCategoriaProd.Text);
+                    
+
+                    var nuevoProd = new NegocioProducto();
+                    //  nuevoProd.AgregarProducto(nombre, descripcion, stock, precio, marca, categoria);
+
+                    txtDescripProd.Clear();
+                    txtMarcaProd.Clear();
+                    txtNombreProd.Clear();
+                    txtPrecioProd.Clear();
+                    txtStockProd.Clear();
+                    comboCategoriaProd.SelectedIndex = -1;
+
+                    dataGridProductos.Refresh();
+                    /*
                     var nombre = txtNombreProd.Text;
                     var marca = txtMarcaProd.Text;
                     var stock = txtStockProd.Text;
@@ -64,6 +88,7 @@ namespace ProyectoTaller2.Capa_Presentacion.Administrador
                     txtDescripProd.Clear();
                     txtPrecioProd.Clear();
                     comboCategoriaProd.SelectedItem = null;
+                    */
 
                 }
                 

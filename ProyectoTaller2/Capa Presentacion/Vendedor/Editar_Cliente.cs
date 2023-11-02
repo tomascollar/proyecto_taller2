@@ -115,18 +115,59 @@ namespace ProyectoTaller2.Capa_Presentacion.Vendedor
                 }
                 if (ask == DialogResult.Yes)
                 {
-                    MessageBox.Show("El cliente " + txtDni.Text +
-                        " se editó correctamente", "Guardar",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-                    int DNI = Convert.ToInt32(txtDni.Text);
+                    int dni = Convert.ToInt32(txtDni.Text);
                     string nombre = txtNombre.Text;
                     string apellido = txtApellido.Text;
                     string telefono = txtTelefono.Text;
                     string direccion = txtDireccion.Text;
+                    string email = txtEmail.Text;
+
+                    proyecto_taller2Entities contexto = new proyecto_taller2Entities();
+
+                    int user_dni = Convert.ToInt32(txtDni.Text);
+
+                    var datos = from clientes in contexto.clientes
+                                where clientes.DNI_cliente == user_dni
+                                select clientes;
+
+                    if(datos.Count() > 0)
+                    {
+                        clientes encontrado = datos.First();
+                        encontrado.DNI_cliente = dni;
+                        encontrado.nombre_cliente = nombre;
+                        encontrado.apellido_cliente = apellido;
+                        encontrado.telefono_cliente = telefono;
+                        encontrado.direccion_cliente = direccion;
+                        encontrado.email_cliente = email;
+                    }
+                    else
+                    {
+                        MessageBox.Show("no se ha podido encontrar al usuario");
+                    }
+
+                    try
+                    {
+                        if (contexto.SaveChanges() == 1)
+                        {
+                            MessageBox.Show("El Usuario " + txtNombre.Text +
+                        " se edito correctamente", "Guardar",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("no se pudo editar");
+                    }
+
+                    txtApellido.Clear();
+                    txtDni.Clear();
+                    txtNombre.Clear();
+                    txtDireccion.Clear();
+                    txtTelefono.Clear();
+                    txtEmail.Clear();
 
                     this.Close();
+
                     FormCliente form = new FormCliente(_form);
                     _form.openChildForm(form);
                 }
@@ -141,6 +182,16 @@ namespace ProyectoTaller2.Capa_Presentacion.Vendedor
             {
                 this.Close();
             }
+        }
+
+        public void CargarDatos(string DNI, string nombre, string apellido, string telefono, string direccion, string email)
+        {
+            txtDni.Text = DNI;
+            txtNombre.Text = nombre;
+            txtApellido.Text = apellido;
+            txtTelefono.Text = telefono;
+            txtDireccion.Text = direccion;
+            txtEmail.Text = email;
         }
     }
 }

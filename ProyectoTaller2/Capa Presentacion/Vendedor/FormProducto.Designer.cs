@@ -30,15 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.columnaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnaMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnaStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnaPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnaDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnaCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAgregarCarrito = new FontAwesome.Sharp.IconButton();
             this.btnBuscarProd = new FontAwesome.Sharp.IconButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,56 +54,6 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(198, 26);
             this.txtBuscar.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.columnaNombre,
-            this.columnaMarca,
-            this.columnaStock,
-            this.columnaPrecio,
-            this.columnaDescripcion,
-            this.columnaCategoria});
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.dataGridView1.Location = new System.Drawing.Point(3, 165);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(765, 253);
-            this.dataGridView1.TabIndex = 5;
-            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // columnaNombre
-            // 
-            this.columnaNombre.HeaderText = "Nombre";
-            this.columnaNombre.Name = "columnaNombre";
-            // 
-            // columnaMarca
-            // 
-            this.columnaMarca.HeaderText = "Marca";
-            this.columnaMarca.Name = "columnaMarca";
-            // 
-            // columnaStock
-            // 
-            this.columnaStock.HeaderText = "Stock";
-            this.columnaStock.Name = "columnaStock";
-            // 
-            // columnaPrecio
-            // 
-            this.columnaPrecio.HeaderText = "Precio";
-            this.columnaPrecio.Name = "columnaPrecio";
-            // 
-            // columnaDescripcion
-            // 
-            this.columnaDescripcion.HeaderText = "Descripción";
-            this.columnaDescripcion.Name = "columnaDescripcion";
-            // 
-            // columnaCategoria
-            // 
-            this.columnaCategoria.HeaderText = "Categoria";
-            this.columnaCategoria.Name = "columnaCategoria";
             // 
             // btnAgregarCarrito
             // 
@@ -150,19 +94,29 @@
             this.btnBuscarProd.UseVisualStyleBackColor = false;
             this.btnBuscarProd.Click += new System.EventHandler(this.btnBuscarProd_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 164);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(775, 266);
+            this.dataGridView1.TabIndex = 8;
+            // 
             // FormProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(780, 430);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnBuscarProd);
             this.Controls.Add(this.btnAgregarCarrito);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
             this.Name = "FormProducto";
             this.Text = "FormProducto";
+            this.Load += new System.EventHandler(this.FormProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -173,14 +127,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnaNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnaMarca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnaStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnaPrecio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnaDescripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnaCategoria;
         private FontAwesome.Sharp.IconButton btnAgregarCarrito;
         private FontAwesome.Sharp.IconButton btnBuscarProd;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
