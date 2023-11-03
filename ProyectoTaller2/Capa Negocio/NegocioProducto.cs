@@ -12,7 +12,7 @@ namespace ProyectoTaller2.Capa_Negocio
 
         private DatosProducto datos = new DatosProducto();
 
-        public bool AgregarProducto(string nombre, int marca, int param_stock, float param_precio, string param_descripcion, int categoria)
+        public bool AgregarProducto(string nombre, int marca, int param_stock, double param_precio, string param_descripcion, int categoria)
         {
             var obj = new productos
             {

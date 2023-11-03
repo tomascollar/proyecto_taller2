@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -57,11 +58,26 @@ namespace ProyectoTaller2.Capa_Presentacion.Administrador
                     double precio = Convert.ToDouble(txtPrecioProd.Text);
                     //falta resolver marca
                     //falta resolver categoria
-                    int categoria = Convert.ToInt32(comboCategoriaProd.Text);
+                    //var categoriaSeleccionada = (categoria)comboCategoriaProd.SelectedItem;
+                    //int idCategoria = categoriaSeleccionada.id_categoria;
+
+                    var context = new proyecto_taller2Entities();
+                    string descCategoriaSeleccionada = comboCategoriaProd.SelectedItem.ToString();
+
+                    categoria categoriaSeleccionada = context.categoria.SingleOrDefault(c => c.descripcion_categoria == descCategoriaSeleccionada);
+
+                    int idCategoria = categoriaSeleccionada.id_categoria;
+
+
+                    string descMarca = comboMarca.SelectedItem.ToString();
+
+                    marca marcaSeleccionada = context.marca.SingleOrDefault(c => c.descripcion_marca == descMarca);
+
+                    int idMarca = marcaSeleccionada.id_marca;
                     
 
                     var nuevoProd = new NegocioProducto();
-                    //  nuevoProd.AgregarProducto(nombre, descripcion, stock, precio, marca, categoria);
+                    nuevoProd.AgregarProducto(nombre, idMarca, stock, precio, descripcion, idCategoria);
 
                     txtDescripProd.Clear();
                     comboMarca.SelectedIndex = -1;
@@ -193,6 +209,36 @@ namespace ProyectoTaller2.Capa_Presentacion.Administrador
             txtPrecioProd.Text = dataGridProductos.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtDescripProd.Text = dataGridProductos.Rows[e.RowIndex].Cells[4].Value.ToString();
             comboCategoriaProd.Text = dataGridProductos.Rows[e.RowIndex].Cells[5].Value.ToString();
+        }
+
+        private void FormProductosAdmin_Load(object sender, EventArgs e)
+        {
+            LlenarCombos();
+            cargarProductos();
+        }
+
+        private void LlenarCombos()
+        {
+            using(var context = new proyecto_taller2Entities())
+            {
+                var categorias = context.categoria.Select(c => c.descripcion_categoria).ToList();
+                comboCategoriaProd.DataSource = categorias;
+                comboCategoriaProd.SelectedIndex = -1;
+
+                var marcas = context.marca.Select(m => m.descripcion_marca).ToList();
+                comboMarca.DataSource = marcas;
+                comboMarca.SelectedIndex = -1;
+
+            }
+            
+        }
+
+        private void cargarProductos()
+        {
+            var negocioProducto = new NegocioProducto();
+            var datos = negocioProducto.ListarProductos();
+
+            dataGridProductos.DataSource = datos;
         }
     }
 }

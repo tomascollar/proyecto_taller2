@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridProductos = new System.Windows.Forms.DataGridView();
-            this.productoNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productoMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prodStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prodPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prodDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prodCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAgregarProd = new FontAwesome.Sharp.IconButton();
             this.btnEditarProd = new FontAwesome.Sharp.IconButton();
             this.btnEliminarProd = new FontAwesome.Sharp.IconButton();
@@ -58,13 +52,6 @@
             this.dataGridProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridProductos.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.productoNombre,
-            this.productoMarca,
-            this.prodStock,
-            this.prodPrecio,
-            this.prodDescripcion,
-            this.prodCategoria});
             this.dataGridProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.dataGridProductos.Location = new System.Drawing.Point(12, 226);
             this.dataGridProductos.Name = "dataGridProductos";
@@ -74,45 +61,6 @@
             this.dataGridProductos.TabIndex = 1;
             this.dataGridProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProductos_CellClick);
             this.dataGridProductos.SelectionChanged += new System.EventHandler(this.dataGridProductos_SelectionChanged);
-            // 
-            // productoNombre
-            // 
-            this.productoNombre.HeaderText = "Nombre";
-            this.productoNombre.Name = "productoNombre";
-            this.productoNombre.ReadOnly = true;
-            this.productoNombre.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // productoMarca
-            // 
-            this.productoMarca.HeaderText = "Marca";
-            this.productoMarca.Name = "productoMarca";
-            this.productoMarca.ReadOnly = true;
-            this.productoMarca.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // prodStock
-            // 
-            this.prodStock.HeaderText = "Stock";
-            this.prodStock.Name = "prodStock";
-            this.prodStock.ReadOnly = true;
-            // 
-            // prodPrecio
-            // 
-            this.prodPrecio.HeaderText = "Precio";
-            this.prodPrecio.Name = "prodPrecio";
-            this.prodPrecio.ReadOnly = true;
-            // 
-            // prodDescripcion
-            // 
-            this.prodDescripcion.HeaderText = "Descripcion";
-            this.prodDescripcion.Name = "prodDescripcion";
-            this.prodDescripcion.ReadOnly = true;
-            // 
-            // prodCategoria
-            // 
-            this.prodCategoria.HeaderText = "Categoria";
-            this.prodCategoria.Name = "prodCategoria";
-            this.prodCategoria.ReadOnly = true;
-            this.prodCategoria.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // btnAgregarProd
             // 
@@ -214,14 +162,6 @@
             this.comboCategoriaProd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCategoriaProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboCategoriaProd.FormattingEnabled = true;
-            this.comboCategoriaProd.Items.AddRange(new object[] {
-            "Bebida",
-            "Comestible",
-            "Cuidado Personal",
-            "Limpieza",
-            "Medicamento",
-            "Accesorio Electronico",
-            "Otros"});
             this.comboCategoriaProd.Location = new System.Drawing.Point(436, 148);
             this.comboCategoriaProd.Name = "comboCategoriaProd";
             this.comboCategoriaProd.Size = new System.Drawing.Size(147, 24);
@@ -328,6 +268,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "FormProductosAdmin";
             this.Text = "FormProductosAdmin";
+            this.Load += new System.EventHandler(this.FormProductosAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -351,12 +292,6 @@
         private System.Windows.Forms.Label labelPrecio;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productoNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productoMarca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prodStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prodPrecio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prodDescripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prodCategoria;
         private System.Windows.Forms.ComboBox comboMarca;
     }
 }
