@@ -40,7 +40,7 @@ namespace ProyectoTaller2.Capa_Presentacion.Administrador
         {
             if (string.IsNullOrEmpty(txtNombreProd.Text) || string.IsNullOrEmpty(txtStockProd.Text) ||
                 string.IsNullOrEmpty(txtPrecioProd.Text) || string.IsNullOrEmpty(txtDescripProd.Text) ||
-                string.IsNullOrEmpty(txtMarcaProd.Text) || comboCategoriaProd.SelectedItem == null ) {
+                comboMarca.SelectedItem == null || comboCategoriaProd.SelectedItem == null ) {
 
                 MessageBox.Show("Debe completar todos los campos","Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -64,7 +64,7 @@ namespace ProyectoTaller2.Capa_Presentacion.Administrador
                     //  nuevoProd.AgregarProducto(nombre, descripcion, stock, precio, marca, categoria);
 
                     txtDescripProd.Clear();
-                    txtMarcaProd.Clear();
+                    comboMarca.SelectedIndex = -1;
                     txtNombreProd.Clear();
                     txtPrecioProd.Clear();
                     txtStockProd.Clear();
@@ -129,7 +129,7 @@ namespace ProyectoTaller2.Capa_Presentacion.Administrador
 
 
                 txtNombreProd.Clear();
-                txtMarcaProd.Clear();
+                comboMarca.SelectedItem = null;
                 txtStockProd.Clear();
                 txtDescripProd.Clear();
                 txtPrecioProd.Clear();
@@ -146,7 +146,7 @@ namespace ProyectoTaller2.Capa_Presentacion.Administrador
 
             if (string.IsNullOrEmpty(txtNombreProd.Text) || string.IsNullOrEmpty(txtStockProd.Text) ||
                 string.IsNullOrEmpty(txtPrecioProd.Text) || string.IsNullOrEmpty(txtDescripProd.Text) ||
-                string.IsNullOrEmpty(txtMarcaProd.Text) || comboCategoriaProd.SelectedItem == null)
+                comboMarca.SelectedItem == null || comboCategoriaProd.SelectedItem == null)
             {
 
                 MessageBox.Show("Debe completar todos los campos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -157,7 +157,7 @@ namespace ProyectoTaller2.Capa_Presentacion.Administrador
                 if (msg == DialogResult.Yes)
                 {
                     var nombre = txtNombreProd.Text;
-                    var marca = txtMarcaProd.Text;
+                    var marca = comboMarca.SelectedItem;
                     var stock = Convert.ToInt32(txtStockProd.Text);
                     var descrip = txtDescripProd.Text;
                     var precio = Convert.ToInt32(txtPrecioProd.Text);
@@ -174,7 +174,7 @@ namespace ProyectoTaller2.Capa_Presentacion.Administrador
                     
 
                     txtNombreProd.Clear();
-                    txtMarcaProd.Clear();
+                    comboMarca.SelectedItem = null;
                     txtStockProd.Clear();
                     txtDescripProd.Clear();
                     txtPrecioProd.Clear();
@@ -188,7 +188,7 @@ namespace ProyectoTaller2.Capa_Presentacion.Administrador
         private void dataGridProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtNombreProd.Text = dataGridProductos.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtMarcaProd.Text = dataGridProductos.Rows[e.RowIndex].Cells[1].Value.ToString();
+            comboMarca.Text = dataGridProductos.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtStockProd.Text = dataGridProductos.Rows[e.RowIndex].Cells[2].Value.ToString();
             txtPrecioProd.Text = dataGridProductos.Rows[e.RowIndex].Cells[3].Value.ToString();
             txtDescripProd.Text = dataGridProductos.Rows[e.RowIndex].Cells[4].Value.ToString();

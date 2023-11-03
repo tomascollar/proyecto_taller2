@@ -28,16 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.columnaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoColumna = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnaDNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnaTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnaEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.columnaDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.txtBuscarDni = new System.Windows.Forms.TextBox();
@@ -62,14 +54,6 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.columnaID,
-            this.columnaNombre,
-            this.apellidoColumna,
-            this.columnaDNI,
-            this.columnaTelefono,
-            this.columnaEmail,
-            this.columnaDireccion});
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.dataGridView1.Location = new System.Drawing.Point(12, 124);
             this.dataGridView1.Name = "dataGridView1";
@@ -77,43 +61,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(656, 314);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // columnaID
-            // 
-            this.columnaID.HeaderText = "ID";
-            this.columnaID.Name = "columnaID";
-            // 
-            // columnaNombre
-            // 
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.columnaNombre.DefaultCellStyle = dataGridViewCellStyle1;
-            this.columnaNombre.HeaderText = "Nombre";
-            this.columnaNombre.Name = "columnaNombre";
-            // 
-            // apellidoColumna
-            // 
-            this.apellidoColumna.HeaderText = "Apellido";
-            this.apellidoColumna.Name = "apellidoColumna";
-            // 
-            // columnaDNI
-            // 
-            this.columnaDNI.HeaderText = "DNI";
-            this.columnaDNI.Name = "columnaDNI";
-            // 
-            // columnaTelefono
-            // 
-            this.columnaTelefono.HeaderText = "Telefono";
-            this.columnaTelefono.Name = "columnaTelefono";
-            // 
-            // columnaEmail
-            // 
-            this.columnaEmail.HeaderText = "Email";
-            this.columnaEmail.Name = "columnaEmail";
-            // 
-            // columnaDireccion
-            // 
-            this.columnaDireccion.HeaderText = "Direccion";
-            this.columnaDireccion.Name = "columnaDireccion";
             // 
             // btnEditar
             // 
@@ -150,6 +97,7 @@
             this.btnEliminar.Text = "Quitar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtBuscarDni
             // 
@@ -218,12 +166,5 @@
         private System.Windows.Forms.TextBox txtBuscarDni;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton btnBuscar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnaID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnaNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoColumna;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnaDNI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnaTelefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnaEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn columnaDireccion;
     }
 }

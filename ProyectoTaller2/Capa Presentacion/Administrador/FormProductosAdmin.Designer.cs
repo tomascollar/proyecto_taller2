@@ -40,7 +40,6 @@
             this.btnEliminarProd = new FontAwesome.Sharp.IconButton();
             this.txtPrecioProd = new System.Windows.Forms.TextBox();
             this.txtNombreProd = new System.Windows.Forms.TextBox();
-            this.txtMarcaProd = new System.Windows.Forms.TextBox();
             this.txtStockProd = new System.Windows.Forms.TextBox();
             this.txtDescripProd = new System.Windows.Forms.TextBox();
             this.comboCategoriaProd = new System.Windows.Forms.ComboBox();
@@ -50,6 +49,7 @@
             this.labelPrecio = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.comboMarca = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -192,14 +192,6 @@
             this.txtNombreProd.Size = new System.Drawing.Size(141, 22);
             this.txtNombreProd.TabIndex = 6;
             // 
-            // txtMarcaProd
-            // 
-            this.txtMarcaProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarcaProd.Location = new System.Drawing.Point(162, 102);
-            this.txtMarcaProd.Name = "txtMarcaProd";
-            this.txtMarcaProd.Size = new System.Drawing.Size(141, 22);
-            this.txtMarcaProd.TabIndex = 7;
-            // 
             // txtStockProd
             // 
             this.txtStockProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -301,12 +293,23 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Marca";
             // 
+            // comboMarca
+            // 
+            this.comboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboMarca.FormattingEnabled = true;
+            this.comboMarca.Location = new System.Drawing.Point(162, 102);
+            this.comboMarca.Name = "comboMarca";
+            this.comboMarca.Size = new System.Drawing.Size(141, 24);
+            this.comboMarca.TabIndex = 17;
+            // 
             // FormProductosAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(777, 456);
+            this.Controls.Add(this.comboMarca);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.labelPrecio);
@@ -316,7 +319,6 @@
             this.Controls.Add(this.comboCategoriaProd);
             this.Controls.Add(this.txtDescripProd);
             this.Controls.Add(this.txtStockProd);
-            this.Controls.Add(this.txtMarcaProd);
             this.Controls.Add(this.txtNombreProd);
             this.Controls.Add(this.txtPrecioProd);
             this.Controls.Add(this.btnEliminarProd);
@@ -340,7 +342,6 @@
         private FontAwesome.Sharp.IconButton btnEliminarProd;
         private System.Windows.Forms.TextBox txtPrecioProd;
         private System.Windows.Forms.TextBox txtNombreProd;
-        private System.Windows.Forms.TextBox txtMarcaProd;
         private System.Windows.Forms.TextBox txtStockProd;
         private System.Windows.Forms.TextBox txtDescripProd;
         private System.Windows.Forms.ComboBox comboCategoriaProd;
@@ -356,5 +357,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn prodPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodDescripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodCategoria;
+        private System.Windows.Forms.ComboBox comboMarca;
     }
 }
